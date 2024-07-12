@@ -10,18 +10,20 @@
 <form>
 <br> <div class="names">
 <lable for="name"><b>SELECT YOUR NAME:</b> </lable>
-<select id="name" name="name" class="options">
-      <option value="'no name'">___</option>
-      <option value="DAD">DAD</option>
-      <option value="MUM">MUM</option>
-      <option value="Mutindi">FAITH</option>
-      <option value="Muuo">ABEDNEGO</option>
-      <option value="Ndanu">GRACE</option>
-      <option value="Munee">JOY</option>
-      <option value="Matei">ERIC</option>
-</select>
- </div> </br>
-         <div id="info"></div>
+<label class="lable" for="infoSelect"><marquee behavior="alternate">BIRTHDAYS</marquee></label>
+   <p><br> <select id="infoSelect" class="names">
+        <option value="none">--Please select your name--</option>
+        <option value="DAD">DAD</option>
+        <option value="MUM">MUM</option>
+        <option value="Muuo">Abednego</option>
+        <option value="Mutindi">Faith</option>
+        <option value="Ndanu">Grace</option>
+        <option value="Munee">Joy</option>
+        <option value="Matei">Eric</option>
+    </select></br> </p>
+
+    <div id="info"></div>
+
  
 
  <br> <div class="names">
@@ -169,7 +171,7 @@
             Matei: "BIRTHDAY 22/OCTOBER/2005"
         };
 
-        document.getElementById('name').addEventListener('change', function() {
+        document.getElementById('infoSelect').addEventListener('change', function() {
             const selectedOption = this.value;
             const infoDiv = document.getElementById('info');
             if (selectedOption && infoData[selectedOption]) {
@@ -181,7 +183,7 @@
       
       
       function collectData() {
-            const name = document.getElementById('name').value;
+            const name = document.getElementById('infoSelect').value;
             const at= document.getElementById('at').value;
             const was= document.getElementById('was').value;
 
