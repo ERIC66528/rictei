@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hello Family</title>
+</head>
+<body>
+<header class="header"><marquee behaviour="scroll" direction="left"> <b>
+      WELCOME TO THE FAMILY WEBSITE </b> </marquee>
+</header>
+<form>
+<br> <div class="names">
+<lable for="name"><b>SELECT YOUR NAME:</b> </lable>
+<select id="name" name="name" class="options">
+      <option value="'no name'">___</option>
+      <option value="Mother">MUM</option>
+      <option value="Father">DAD</option>
+      <option value="Mutindi">FAITH</option>
+      <option value="Muuo">ABEDNEGO</option>
+      <option value="Mdanu">GRACE</option>
+      <option value="Munee">JOY</option>
+      <option value="Matei">ERIC</option>
+</select>
+ </div> </br>
+ 
+
+ <br> <div class="names">
+<lable for="county"><b>PRESENT COUNTY:</b></lable>
+<select id="at" name="county" class="options">
+      <option value="'no county'">___</option>
+      <option value="Machakos"> Machakos</option>
+      <option value="Nairobi"> Nairobi</option>
+      <option value="Nakuru">Nakuru</option>
+      <option value="Tharaka nithi">Tharaka nithi</option>
+</select> 
+ </div> 
+ </br>
+ 
+ <br> <div class="names">
+ 
+<lable for="mood"><b>HOW WAS YOUR DAY:</b></lable>
+<select id="was" name="mood" class="options">
+      <option value="'no response'">___</option>
+      <option value="Very good"> Very good</option>
+      <option value="good"> Good</option>
+      <option value="not good"> Not good</option>
+      <option value="no comment"> No comment</option>
+</select>  
+ </div> </br>
+ 
+ <br> </div>
+ 
+<p class="verse"><b>SUGGEST A BIBLE VERSE FOR THE DAY:</b></p>
+<p><textarea class="txtarea" rows="10" cols="100"></textarea></p>
+ 
+</div> </br>
+
+
+<br>
+</br>
+
+   <button type="button" onclick="collectData()">Submit</button>
+</form>
+<div class="contact">
+<p class="text"><b>FOR MORE INFO:</b></p>
+    <p> <button id="callButton" onclick="alert('You are contacting Eric Matei')" class="call">Call Eric</button> </p>
+    <p>  <button id="emailbutton" onclick="alert('You are sending e-mail to Eric Matei')" class="call">Send email</button>
+    <p> <button class="call"> <a href="https://www.facebook.com/profile.php?id=61556557247935">Facebook</a> </button> </p>
+    
+    
+
+</div>
+
+<footer class="footer">
+
+<p><b>&copy;2024 Eric Matei</b> </p>
+
+
+</footer>
+</body>
+</html><style>body{
+  background-color:grey;
+
+}
+.header{
+  color:black; 
+  background-color:red;
+  padding:40px;
+  font-size:40px;
+  border-radius:100px;
+  
+  
+}
+.names{
+  color:white; 
+  background-color:black;
+  padding:20px;
+  font-size:40px;
+  border-radius:0px;
+  align:center;
+ }
+.options{
+  color:blue; 
+  background-color:pink;
+  padding:10px;
+  font-size:30px;
+  border-radius:100px;
+ }
+
+.verse{
+  font-size:30px;
+
+
+
+}
+.txtarea{
+  background-color:white;
+  color:blue; 
+  padding:30px;
+  border-radius:10px;
+  
+  
+  
+}
+.submit{
+  background-color:red;
+  border-radius:10px;
+  border-size:10px;
+  border-color:red;
+  padding:10px;
+  color:white;
+  font-size:30px;
+  
+} 
+.call{
+  font-size:30px;
+  background-color:blue;
+  color:white;
+  
+  
+}
+.contact{
+ color:white;
+ padding:50px; 
+ border-radius:0px;
+ background-color:black;
+ }
+  
+.space{
+  text-align:center;
+  
+}
+  
+.footer{
+  text-align:center;
+  color:blue;
+  font-size:30px;
+  
+  
+}
+</style><script>function collectData() {
+            const name = document.getElementById('name').value;
+            const at= document.getElementById('at').value;
+            const was= document.getElementById('was').value;
+
+            alert(` \n ${name}\nat ${at} \nwas ${was}`);
+        }
+
+document.getElementById('callButton').addEventListener('click', () => {
+            window.location.href = 'tel:0717831209';
+        });
+document.getElementById('emailbutton').addEventListener('click', () => {
+            window.location.href = 'mailto:mateieric66@gmail.com';
+        });
+</script>
