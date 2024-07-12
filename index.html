@@ -157,7 +157,29 @@
   
   
 }
-</style><script>function collectData() {
+</style><script>
+      const infoData = {
+            DAD: "BIRTHDAY 22/OCTOBER/2005",
+            MUM: "BIRTHDAY 22/OCTOBER/2005",
+            Muuo: "BIRTHDAY 22/OCTOBER/2005",
+            Mutindi: "BIRTHDAY 22/OCTOBER/2005",
+            Ndanu: "BIRTHDAY 22/OCTOBER/2005",
+            Munee: "BIRTHDAY 22/OCTOBER/2005",
+            Matei: "BIRTHDAY 22/OCTOBER/2005"
+        };
+
+        document.getElementById('infoSelect').addEventListener('change', function() {
+            const selectedOption = this.value;
+            const infoDiv = document.getElementById('info');
+            if (selectedOption && infoData[selectedOption]) {
+                infoDiv.textContent = infoData[selectedOption];
+            } else {
+                infoDiv.textContent = "";
+            }
+        });
+      
+      
+      function collectData() {
             const name = document.getElementById('name').value;
             const at= document.getElementById('at').value;
             const was= document.getElementById('was').value;
