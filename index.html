@@ -52,9 +52,9 @@
  
  <br> </div>
  
-<p class="verse"><b>SUGGEST A BIBLE VERSE FOR THE DAY:</b></p>
-<p><textarea class="txtarea" rows="10" cols="100" placeholder="Type an inspirational Bible verse here"></textarea></p>
- 
+    <textarea id="message" rows="4" cols="50" placeholder="Type the bible verse here..."></textarea><br>
+    <button onclick="sendMessage()">Send to WhatsApp</button>
+
 </div> </br>
 
 
@@ -122,15 +122,6 @@
 
 
 }
-.txtarea{
-  background-color:white;
-  color:blue; 
-  padding:30px;
-  border-radius:10px;
-  
-  
-  
-}
 .submit{
   background-color:red;
   border-radius:10px;
@@ -189,6 +180,7 @@
         });
       
       
+      
       function collectData() {
             const name = document.getElementById('infoSelect').value;
             const at= document.getElementById('at').value;
@@ -196,6 +188,12 @@
 
             alert(` \n ${name}\nat ${at} \nwas ${was}`);
         }
+function sendMessage() {
+            var message = document.getElementById("message").value;
+            var phoneNumber = "245717831209"; // Your WhatsApp number
+            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+            window.open(whatsappUrl, '_blank');
+}
 
 document.getElementById('callButton').addEventListener('click', () => {
             window.location.href = 'tel:0717831209';
