@@ -52,8 +52,10 @@
  
  <br> </div>
  
-    <textarea id="message" rows="4" cols="50" placeholder="Type the bible verse here..."></textarea><br>
-    <button onclick="sendMessage()">Send to WhatsApp</button>
+            <textarea id="message" placeholder="Type the verse here..." rows="10" cols="100"></textarea>
+        <br></br>
+        <button type="button" class="whatsapp" onclick="sendToWhatsAppGroup()">Send to WhatsApp Group</button>
+    
 
 </div> </br>
 
@@ -118,6 +120,12 @@
 
 .verse{
   font-size:30px;
+.whatsapp{
+  padding:20px;
+  color:white;
+  background-color:black;
+  
+}
 
 
 
@@ -188,12 +196,12 @@
 
             alert(` \n ${name}\nat ${at} \nwas ${was}`);
         }
-function sendMessage() {
-            var message = document.getElementById("message").value;
-            var phoneNumber = "245717831209"; // Your WhatsApp number
-            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-            window.open(whatsappUrl, '_blank');
-}
+function sendToWhatsAppGroup() {
+            var message = document.getElementById('message').value;
+            var groupInviteLink = "https://chat.whatsapp.com/H8SbcpD7sVbG2IBAtyyAbt";
+            var url = groupInviteLink + "?text=" + encodeURIComponent(message);
+            window.open(url, '_blank');
+        }
 
 document.getElementById('callButton').addEventListener('click', () => {
             window.location.href = 'tel:0717831209';
