@@ -1,214 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Hello Family</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Family</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            color: #fff;
+            background-color: #007bff;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        select,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
 </head>
 <body>
-<header class="header"><marquee behaviour="scroll" direction="left"> <b>
-      WELCOME TO THE FAMILY WEBSITE </b> </marquee>
-</header>
-<form>
-<br> <div class="names">
-<lable for="name"><b>SELECT YOUR NAME:</b> </lable>
-<label class="lable" for="infoSelect"></label>
-   <p><br> <select id="infoSelect" class="names">
-        <option value="none">--Please select your name--</option>
-        <option value="DAD">DAD</option>
-        <option value="MUM">MUM</option>
-        <option value="Muuo">Abednego</option>
-        <option value="Mutindi">Faith</option>
-        <option value="Ndanu">Grace</option>
-        <option value="Munee">Joy</option>
-        <option value="Matei">Eric</option>
-    </select></br> </p>
+    <header class="header">
+        <marquee behavior="scroll" direction="left">WELCOME TO THE FAMILY WEBSITE</marquee>
+    </header>
 
-    <div id="info"></div>
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="infoSelect">Select Your Name:</label>
+                <select id="infoSelect">
+                    <option value="none">--Please select your name--</option>
+                    <option value="DAD">DAD</option>
+                    <option value="MUM">MUM</option>
+                    <option value="Muuo">Abednego</option>
+                    <option value="Mutindi">Faith</option>
+                    <option value="Ndanu">Grace</option>
+                    <option value="Munee">Joy</option>
+                    <option value="Matei">Eric</option>
+                </select>
+                <div id="info"></div>
+            </div>
 
- 
+            <div class="form-group">
+                <label for="at">Present County:</label>
+                <select id="at" name="county">
+                    <option value="no county">___</option>
+                    <option value="Machakos">Machakos</option>
+                    <option value="Nairobi">Nairobi</option>
+                    <option value="Nakuru">Nakuru</option>
+                    <option value="Tharaka nithi">Tharaka Nithi</option>
+                </select>
+            </div>
 
- <br> <div class="names">
-<lable for="county"><b>PRESENT COUNTY:</b></lable>
-<select id="at" name="county" class="options">
-      <option value="'no county'">___</option>
-      <option value="Machakos"> Machakos</option>
-      <option value="Nairobi"> Nairobi</option>
-      <option value="Nakuru">Nakuru</option>
-      <option value="Tharaka nithi">Tharaka nithi</option>
-</select> 
- </div> 
- </br>
- 
- <br> <div class="names">
- 
-<lable for="mood"><b>HOW WAS YOUR DAY:</b></lable>
-<select id="was" name="mood" class="options">
-      <option value="'no response'">___</option>
-      <option value="Very good"> Very good</option>
-      <option value="good"> Good</option>
-      <option value="not good"> Not good</option>
-      <option value="no comment"> No comment</option>
-</select>  
- </div> </br>
- 
- <br> </div>
- 
-            <textarea id="message" placeholder="Type the verse here..." rows="10" cols="100"></textarea>
-        <br></br>
-        <button type="button" class="whatsapp" onclick="sendToWhatsAppGroup()">Send to WhatsApp Group</button>
-    
+            <div class="form-group">
+                <label for="was">How Was Your Day:</label>
+                <select id="was" name="mood">
+                    <option value="no response">___</option>
+                    <option value="Very good">Very good</option>
+                    <option value="good">Good</option>
+                    <option value="not good">Not good</option>
+                    <option value="no comment">No comment</option>
+                </select>
+            </div>
 
-</div> </br>
+            <div class="form-group">
+                <label for="message">Verse of the Day</label>
+                <textarea id="message" placeholder="Type the verse here..."></textarea>
+            </div>
 
+            <button type="button" class="button" onclick="sendToWhatsAppGroup()">Send to WhatsApp Group</button>
+            <button type="button" class="button" onclick="collectData()">Submit</button>
+        </form>
+    </div>
 
-<br>
-      <p class="verse"><b> VERSE OF THE DAY</b></p>
-<p class=names> John 3:16 </p>
-</br>
+    <div class="contact">
+        <p><b>FOR MORE INFO:</b></p>
+        <p><button class="button" id="callButton">Call Eric</button></p>
+        <p><button class="button" id="emailButton">Send email</button></p>
+        <p><button class="button"><a href="https://www.facebook.com/profile.php?id=61556557247935">Facebook</a></button></p>
+        <p><button class="button" onclick="refreshPage()">Refresh Page</button></p>
+    </div>
 
-   <button type="button" onclick="collectData()">Submit</button>
-</form>
-<div class="contact">
-<p class="text"><b>FOR MORE INFO:</b></p>
-    <p> <button id="callButton" onclick="alert('You are contacting Eric Matei')" class="call">Call Eric</button> </p>
-    <p>  <button id="emailbutton" onclick="alert('You are sending e-mail to Eric Matei')" class="call">Send email</button>
-    <p> <button class="call"> <a href="https://www.facebook.com/profile.php?id=61556557247935">Facebook</a> </button> </p>
-    
-    
+    <footer class="footer">
+        <p>&copy; 2024 Eric Matei</p>
+    </footer>
 
-</div>
-<div> <<br> 
-<button onclick="refreshPage()" class="names">Refresh Page</button>
-
-</br>
-</div>
-
-<footer class="footer">
-
-<p><b>&copy;2024 Eric Matei</b> </p>
-
-
-</footer>
-</body>
-</html><style>body{
-  background-color:grey;
-
-}
-.header{
-  color:black; 
-  background-color:red;
-  padding:40px;
-  font-size:40px;
-  border-radius:100px;
-  
-  
-}
-.names{
-  color:white; 
-  background-color:black;
-  padding:20px;
-  font-size:40px;
-  border-radius:0px;
-  align:center;
- }
-.options{
-  color:blue; 
-  background-color:pink;
-  padding:10px;
-  font-size:30px;
-  border-radius:100px;
- }
-
-.verse{
-  font-size:30px;
-.whatsapp{
-  padding:20px;
-  color:white;
-  background-color:black;
-  
-}
-
-
-
-}
-.submit{
-  background-color:red;
-  border-radius:10px;
-  border-size:10px;
-  border-color:red;
-  padding:10px;
-  color:white;
-  font-size:30px;
-  
-} 
-.call{
-  font-size:30px;
-  background-color:blue;
-  color:white;
-  
-  
-}
-.contact{
- color:white;
- padding:50px; 
- border-radius:0px;
- background-color:black;
- }
-  
-.space{
-  text-align:center;
-  
-}
-  
-.footer{
-  text-align:center;
-  color:blue;
-  font-size:30px;
-  
-  
-}
-</style><script>
-      const infoData = {
-            DAD: "BIRTHDAY 22/OCTOBER/2005",
-            MUM: "BIRTHDAY 22/OCTOBER/2005",
-            Muuo: "BIRTHDAY 22/OCTOBER/2005",
-            Mutindi: "BIRTHDAY 22/OCTOBER/2005",
-            Ndanu: "BIRTHDAY 22/OCTOBER/2005",
-            Munee: "BIRTHDAY 22/OCTOBER/2005",
-            Matei: "BIRTHDAY 22/OCTOBER/2005"
+    <script>
+        const infoData = {
+            DAD: "Birthday: 22/October/2005",
+            MUM: "Birthday: 22/October/2005",
+            Muuo: "Birthday: 22/October/2005",
+            Mutindi: "Birthday: 22/October/2005",
+            Ndanu: "Birthday: 22/October/2005",
+            Munee: "Birthday: 22/October/2005",
+            Matei: "Birthday: 22/October/2005"
         };
 
         document.getElementById('infoSelect').addEventListener('change', function() {
             const selectedOption = this.value;
             const infoDiv = document.getElementById('info');
-            if (selectedOption && infoData[selectedOption]) {
-                infoDiv.textContent = infoData[selectedOption];
-            } else {
-                infoDiv.textContent = "";
-            }
+            infoDiv.textContent = infoData[selectedOption] || "";
         });
-      
-      
-      
-      function collectData() {
-            const name = document.getElementById('infoSelect').value;
-            const at= document.getElementById('at').value;
-            const was= document.getElementById('was').value;
 
-            alert(` \n ${name}\nat ${at} \nwas ${was}`);
+        function collectData() {
+            const name = document.getElementById('infoSelect').value;
+            const at = document.getElementById('at').value;
+            const was = document.getElementById('was').value;
+            alert(`Name: ${name}\nCounty: ${at}\nMood: ${was}`);
         }
-function sendToWhatsAppGroup() {
-            var message = document.getElementById('message').value;
-            var groupInviteLink = "https://chat.whatsapp.com/H8SbcpD7sVbG2IBAtyyAbt";
-            var url = groupInviteLink + "?text=" + encodeURIComponent(message);
+
+        function sendToWhatsAppGroup() {
+            const message = document.getElementById('message').value;
+            const groupInviteLink = "https://chat.whatsapp.com/H8SbcpD7sVbG2IBAtyyAbt";
+            const url = groupInviteLink + "?text=" + encodeURIComponent(message);
             window.open(url, '_blank');
         }
 
-document.getElementById('callButton').addEventListener('click', () => {
+        document.getElementById('callButton').addEventListener('click', () => {
             window.location.href = 'tel:0717831209';
         });
-document.getElementById('emailbutton').addEventListener('click', () => {
+
+        document.getElementById('emailButton').addEventListener('click', () => {
             window.location.href = 'mailto:mateieric66@gmail.com';
         });
-function refreshPage() {
-        window.location.reload();}
-</script>
+
+        function refreshPage() {
+            window.location.reload();
+        }
+    </script>
+</body>
+                                                                                  </html>
