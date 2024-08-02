@@ -89,7 +89,7 @@
         .footer {
             text-align: center;
             padding: 10px;
-            background-color: #007bff;
+            background-color: black;
             color: #fff;
             position: fixed;
             width: 100%;
@@ -178,8 +178,10 @@
 
         document.getElementById('infoSelect').addEventListener('change', function() {
             const selectedOption = this.value;
-            const infoDiv = document.getElementById('info');
-            infoDiv.textContent = infoData[selectedOption] || "";
+            const birthdayInfo = infoData[selectedOption];
+            if (birthdayInfo) {
+                alert(birthdayInfo);
+            }
         });
 
         function collectData() {
@@ -209,4 +211,4 @@
         }
     </script>
 </body>
-                                                                                  </html>
+                    </html>
